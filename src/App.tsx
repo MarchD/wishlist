@@ -1,19 +1,15 @@
-import React, { useEffect } from 'react'
-import { useAppDispatch, useAppSelector } from './hooks/redux'
-import { fetchUsers } from './store/reducers/ActionCreators'
+import React from 'react'
+import Header from './components/header/Header'
+import { Route, Switch } from 'react-router-dom'
+import { routes } from './components/routes/routes'
 
 function App() {
-  const dispatch = useAppDispatch()
-  const {users, isLoading, error} = useAppSelector(state => state.userReducer)
-
-  useEffect(() => {
-    dispatch(fetchUsers())
-  }, [ ])
   return (
-    <div className="App">
-      {isLoading && <h1>Идет загрузка...</h1>}
-      {error && <h1>{error}</h1>}
-      {JSON.stringify(users, null, 2)}
+    <div>
+      <Header/>
+      <Switch>
+        {routes.map(route => <Route path={route.path} component={route.component} key={route.path} exact/>)}
+      </Switch>
     </div>
   );
 }
