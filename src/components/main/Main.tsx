@@ -1,10 +1,11 @@
 import React from 'react'
+import Container from '../layout/container/Container'
 
 const Main = () => {
     return (
-        <div>
+        <Container size={'lg'}>
             Main
-        </div>
+        </Container>
     )
 }
 

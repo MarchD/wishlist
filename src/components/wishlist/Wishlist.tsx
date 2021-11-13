@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { FC } from 'react'
+import Container from '../layout/container/Container'
 
-const Wishlist = () => {
+const Wishlist: FC = () => {
     return (
-        <div>
+        <Container size={'lg'}>
             Wishlist
-        </div>
+        </Container>
     )
 }
 

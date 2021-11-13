@@ -1,10 +1,10 @@
 import { Routes, RouteType } from '../../models/routes'
-import { Main } from '../main'
-import { Profile } from '../profile'
-import { UserWishlists } from '../user-wishlists'
-import { Wishlist } from '../wishlist'
-import { Login } from '../login'
-import { PageNotFound } from '../page-not-found'
+import Main from '../main/Main'
+import Profile from '../profile/Profile'
+import UserWishlists from '../user-wishlists/UserWishlists'
+import Wishlist from '../wishlist/Wishlist'
+import Login from '../login/Login'
+import PageNotFound from '../page-not-found/page-not-found'
 
 export const routes: RouteType[] = [
     {

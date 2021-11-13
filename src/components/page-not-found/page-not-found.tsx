@@ -1,10 +1,11 @@
 import React from 'react'
+import Container from '../layout/container/Container'
 
 const PageNotFound = () => {
     return (
-        <div>
+        <Container size={'lg'}>
             Page not found
-        </div>
+        </Container>
     )
 }
 
