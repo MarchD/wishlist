@@ -1,0 +1,18 @@
+.button {
+  max-width: 250px;
+  width: 100%;
+  padding: 8px 16px;
+
+  &.text {
+    padding: 8px 0;
+    margin: 0 !important;
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  &.contained {
+    border: 1px solid black !important;
+  }
+}

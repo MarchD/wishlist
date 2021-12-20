@@ -1,17 +1,21 @@
 import React, { FC } from 'react'
-import { CardMedia, Typography } from '@mui/material'
-import { CardContentStyled, CardStyled, CardTypographyStyled } from './WishStyled'
+import { Card, CardContent, CardMedia, Typography } from '@mui/material'
 import { Wish as WishProps } from '../../models/wish'
+import styles from './Wish.module.scss'
 
 const Wish: FC<WishProps> = ({price, title, image}) => {
     return (
-        <CardStyled component={'button'}>
+        <Card component={'button'} className={styles.card}>
             <CardMedia component={'img'} src={image}/>
-            <CardContentStyled>
-                <CardTypographyStyled variant={'body2'}>{title}</CardTypographyStyled>
-                <Typography variant={'body2'} sx={{whiteSpace: 'nowrap'}}>{price} грн</Typography>
-            </CardContentStyled>
-        </CardStyled>
+            <CardContent className={styles.content}>
+                <Typography variant={'body2'} className={styles.title}>
+                    {title}
+                </Typography>
+                <Typography variant={'body2'} sx={{whiteSpace: 'nowrap'}}>
+                    {price} грн
+                </Typography>
+            </CardContent>
+        </Card>
     )
 }
 

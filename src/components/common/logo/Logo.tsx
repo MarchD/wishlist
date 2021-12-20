@@ -3,17 +3,17 @@ import {Link} from 'react-router-dom'
 import { Routes } from '../../../models/routes'
 import { LogoProps } from 'src/models/logo'
 import { logo } from '../../../assets'
-import { LogoStyled } from './LogoStyled';
+import styles from './Logo.module.scss'
 
 const Logo: FC<LogoProps> = ({size, link = false}) => {
     return (
-        <LogoStyled>
+        <div className={styles.logo}>
             {link ? (
                 <Link to={Routes.MAIN_PAGE}>
                     <img src={logo} alt="Wishlist" width={size}/>
                 </Link>
             ) : <img src={logo} alt="Wishlist" width={size}/>}
-        </LogoStyled>
+        </div>
     )
 }
 

@@ -1,22 +1,18 @@
-import styled from 'styled-components'
-import { Card, CardContent, Typography } from '@mui/material'
-import React from 'react'
-
-export const CardStyled = styled((props) => <Card {...props}/>)`
+.card {
   width: 100%;
   max-width: 300px;
   padding: 0.5rem;
   cursor: pointer;
-`
+}
 
-export const CardContentStyled = styled(CardContent)`
+.content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 0.5rem;
-`
+}
 
-export const CardTypographyStyled = styled((props) => <Typography {...props}/>)`
+.title {
   font-size: 0.785rem;
   text-overflow: ellipsis;
   word-wrap: break-word;
@@ -24,4 +20,4 @@ export const CardTypographyStyled = styled((props) => <Typography {...props}/>)`
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-`
+}
