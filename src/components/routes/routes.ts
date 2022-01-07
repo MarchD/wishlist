@@ -10,23 +10,29 @@ export const routes: RouteType[] = [
     {
         path: Routes.MAIN_PAGE,
         component: Main,
-        role: 'user'
+        role: 'user',
+        label: 'Main page'
     },{
         path: Routes.PROFILE_PAGE,
         component: Profile,
-        role: 'user'
+        role: 'user',
+        label: 'Profile'
     },{
         path: Routes.USER_WISHLISTS_PAGE,
         component: UserWishlists,
-        role: 'user'
+        role: 'user',
+        label: 'Settings wishlist'
     },{
         path: Routes.WISHLIST_PAGE,
-        component: Wishlist
+        component: Wishlist,
+        label: 'Wishlist'
     },{
         path: Routes.PAGE_NOT_FOUND,
-        component: PageNotFound
+        component: PageNotFound,
+        label: '404'
     },{
         path: Routes.LOGIN_PAGE,
-        component: Login
+        component: Login,
+        label: 'Login'
     }
 ];

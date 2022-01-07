@@ -9,7 +9,18 @@ function App() {
         <div>
             <Header/>
             <Switch>
-                {routes.map(route => <Route path={route.path} component={route.component} key={route.path} exact/>)}
+                <Redirect
+                    from={Routes.MAIN_PAGE}
+                    to={Routes.PROFILE_PAGE}
+                    exact
+                />
+                {routes.map(route =>
+                    <Route
+                        path={route.path}
+                        component={route.component}
+                        key={route.path}
+                        exact
+                    />)}
                 <Redirect to={Routes.PAGE_NOT_FOUND}/>
             </Switch>
         </div>

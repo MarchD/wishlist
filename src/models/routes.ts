@@ -14,6 +14,9 @@ type RouteRole = 'user'
 
 export type RouteType = {
     path: Routes,
-    component: ComponentType<RouteComponentProps<any>> | ComponentType<any> | undefined,
-    role?: RouteRole
+    component: ComponentType<RouteComponentProps<any>>
+        | ComponentType<any>
+        | undefined,
+    role?: RouteRole,
+    label?: string
 }
