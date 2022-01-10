@@ -1,16 +1,16 @@
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
 export interface AccordionProps {
-    title: string
-    withButton?: boolean
+  title: string;
+  withButton?: boolean;
 }
 
 export interface AccordionList {
-    id: number
-    title: string
-    component: ReactNode
+  id: number;
+  title: string;
+  component: ReactNode;
 }
 
 export interface AccordionListProps {
-    accordions: AccordionList[]
+  accordions: AccordionList[];
 }

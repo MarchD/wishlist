@@ -1,18 +1,19 @@
-import React from 'react'
-import Container from '../layout/container/Container'
-import { routes } from '../routes/routes'
-import { Link as RouterLink } from 'react-router-dom'
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import Container from '../layout/container/Container';
+// eslint-disable-next-line import/no-cycle
+import { routes } from '../routes/routes';
 
-const Main = () => {
-    return (
-        <Container size={'lg'}>
-            {routes.map(route => (
-                <p>
-                    <RouterLink to={route.path}>{route.label}</RouterLink>
-                </p>
-            ))}
-        </Container>
-    )
+function Main() {
+  return (
+    <Container size="lg">
+      {routes.map((route) => (
+        <p key={route.path}>
+          <RouterLink to={route.path}>{route.label}</RouterLink>
+        </p>
+      ))}
+    </Container>
+  );
 }
 
-export default Main
+export default Main;

@@ -1,30 +1,21 @@
-import React from 'react'
-import Header from './components/header/Header'
-import { Redirect, Route, Switch } from 'react-router-dom'
-import { routes } from './components/routes/routes'
-import { Routes } from './models/routes'
+import React from 'react';
+import { Navigate, Routes, Route } from 'react-router-dom';
+import Header from './components/header/Header';
+import { routes } from './components/routes/routes';
+import { Routes as RoutesEnum } from './models/routes';
 
 function App() {
-    return (
-        <div>
-            <Header/>
-            <Switch>
-                <Redirect
-                    from={Routes.MAIN_PAGE}
-                    to={Routes.PROFILE_PAGE}
-                    exact
-                />
-                {routes.map(route =>
-                    <Route
-                        path={route.path}
-                        component={route.component}
-                        key={route.path}
-                        exact
-                    />)}
-                <Redirect to={Routes.PAGE_NOT_FOUND}/>
-            </Switch>
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+      <Routes>
+        {routes.map((route) => (
+          <Route path={route.path} element={route.component} key={route.path} />
+        ))}
+        <Route path="*" element={<Navigate to={RoutesEnum.PAGE_NOT_FOUND} />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;

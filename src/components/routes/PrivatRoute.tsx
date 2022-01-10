@@ -1,11 +1,15 @@
-import React, { FC } from 'react'
-import { Routes, RouteType } from '../../models/routes'
-import { Redirect, Route } from 'react-router-dom'
+import React, { FC } from 'react';
+// import { Navigate, Route } from 'react-router-dom';
+import { RouteType } from '../../models/routes';
 
-const PrivatRoute: FC<RouteType> = ({role, ...props}) => {
-    return role
-        ? <Route {...props} exact/>
-        : <Redirect to={Routes.LOGIN_PAGE} />
-}
+const PrivatRoute: FC<RouteType> = () => {
+  // const { role, ...otherProps } = props;
+  return <div>privat router</div>;
+  // return role ? (
+  //   <Route {...props} />
+  // ) : (
+  //   <Route path="*" element={<Navigate to={RoutesEnum.LOGIN_PAGE} />} />
+  // );
+};
 
 export default PrivatRoute;
