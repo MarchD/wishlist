@@ -1,17 +1,36 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { Typography } from '@mui/material';
 import Container from '../layout/container/Container';
-// eslint-disable-next-line import/no-cycle
-import { routes } from '../routes/routes';
+import Logo from '../common/logo/Logo';
+import { LogoSizes } from '../../models/logo';
+import Button from '../common/button/Button';
+import AnimationFrame from '../common/animation/AnimationFrame';
+import { animations } from '../../mocked-data/animations';
+import { CardStyled, ContentStyled, SliderStyled } from './MainStyled';
 
 function Main() {
+  const { t } = useTranslation('common');
+
   return (
-    <Container size="lg">
-      {routes.map((route) => (
-        <p key={route.path}>
-          <RouterLink to={route.path}>{route.label}</RouterLink>
-        </p>
-      ))}
+    <Container size="md">
+      <CardStyled>
+        <ContentStyled>
+          <Typography fontSize={40} fontWeight={600} component="h1">
+            {t('mainTitle')}
+            <br />
+            <Logo size={LogoSizes.LARGE} />
+          </Typography>
+
+          <Button variant="contained">{t('create')}</Button>
+        </ContentStyled>
+
+        <SliderStyled interval={2000} indicators={false} navButtonsAlwaysInvisible>
+          {animations.map(({ data, id }) => (
+            <AnimationFrame data={data} key={id} height="50vh" />
+          ))}
+        </SliderStyled>
+      </CardStyled>
     </Container>
   );
 }

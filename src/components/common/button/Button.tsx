@@ -1,19 +1,14 @@
 import React, { FC } from 'react';
-import { ButtonProps, Button as ButtonMaterial } from '@mui/material';
-
-import classNames from 'classnames';
-import styles from './Button.module.scss';
+import { ButtonProps } from '@mui/material';
+import { ButtonStyled } from './ButtonStyled';
 
 const Button: FC<ButtonProps> = (props) => {
   const { children, variant = 'text', ...otherProps } = props;
+
   return (
-    <ButtonMaterial
-      {...otherProps}
-      variant={variant}
-      className={classNames(styles.button, styles[variant])}
-    >
+    <ButtonStyled {...otherProps} variant={variant}>
       {children}
-    </ButtonMaterial>
+    </ButtonStyled>
   );
 };
 

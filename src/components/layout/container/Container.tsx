@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
 import { ContainerProps } from 'src/models/container';
-import { Container as ContainerMaterial } from '@mui/material';
-import styles from './Container.module.scss';
+import { ContainerStyled } from './ContainerStyled';
 
-const Container: FC<ContainerProps> = ({ size, children }) => {
+const Container: FC<ContainerProps> = (props) => {
+  const { size, children, ...otherProps } = props;
+
   return (
-    <ContainerMaterial maxWidth={size} className={styles.container}>
+    <ContainerStyled maxWidth={size} {...otherProps}>
       {children}
-    </ContainerMaterial>
+    </ContainerStyled>
   );
 };
 

@@ -1,15 +1,17 @@
-import React, { FC, MouseEvent } from 'react';
+import React, { FC, MouseEvent, useState } from 'react';
 import { Accordion as AccordionMaterial } from '@mui/material';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { ExpandMore } from '@mui/icons-material';
 import { AccordionProps } from 'src/models/accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
+import { useTranslation } from 'react-i18next';
 import Title from '../title/Title';
 import Button from '../button/Button';
-import styles from './Accordion.module.scss';
+import { AccordionSummaryStyled } from './AccordionStyled';
 
-const Accordion: FC<AccordionProps> = ({ title, withButton, children }) => {
-  const [expanded, setExpanded] = React.useState<boolean>(false);
+const Accordion: FC<AccordionProps> = (props) => {
+  const { title, withButton, children } = props;
+  const [expanded, setExpanded] = useState<boolean>(false);
+  const { t } = useTranslation('common');
 
   const toggleAccordion = () => {
     setExpanded((current) => !current);
@@ -21,14 +23,14 @@ const Accordion: FC<AccordionProps> = ({ title, withButton, children }) => {
 
   return (
     <AccordionMaterial expanded={expanded} onChange={toggleAccordion}>
-      <AccordionSummary expandIcon={<ExpandMore />} className={styles.summary}>
+      <AccordionSummaryStyled expandIcon={<ExpandMore />}>
         <Title>{title}</Title>
         {expanded && withButton && (
           <Button variant="contained" sx={{ mr: 1 }} onClick={handleClickBtn}>
-            Добавить подарок
+            {t('addGift')}
           </Button>
         )}
-      </AccordionSummary>
+      </AccordionSummaryStyled>
 
       <AccordionDetails sx={{ boxShadow: 'none' }}>{children}</AccordionDetails>
     </AccordionMaterial>

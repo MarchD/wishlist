@@ -3,7 +3,9 @@ import { Grid } from '@mui/material';
 import Wish from './Wish';
 import { WishListProps } from '../../models/wish';
 
-const WishList: FC<WishListProps> = ({ wishes }) => {
+const WishList: FC<WishListProps> = (props) => {
+  const { wishes } = props;
+
   return (
     <Grid container spacing={2}>
       {wishes.map((item) => (

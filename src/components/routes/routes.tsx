@@ -13,19 +13,19 @@ export const routes: RouteType[] = [
     path: Routes.MAIN_PAGE,
     component: <Main />,
     role: 'user',
-    label: 'Main page',
+    label: 'main',
   },
   {
     path: Routes.PROFILE_PAGE,
     component: <Profile />,
     role: 'user',
-    label: 'Profile',
+    label: 'myProfile',
   },
   {
     path: Routes.USER_WISHLISTS_PAGE,
     component: <UserWishlists />,
     role: 'user',
-    label: 'Settings wishlist',
+    label: 'myLists',
   },
   {
     path: Routes.WISHLIST_PAGE,

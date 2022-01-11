@@ -1,21 +1,24 @@
 import React, { FC } from 'react';
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { CardMedia, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { Wish as WishProps } from '../../models/wish';
-import styles from './Wish.module.scss';
+import { CardStyled, ContentStyled, TitleStyled } from './WishStyled';
 
-const Wish: FC<WishProps> = ({ price, title, image }) => {
+const Wish: FC<WishProps> = (props) => {
+  const { price, title, image } = props;
+  const { t } = useTranslation('common');
+
   return (
-    <Card component="button" className={styles.card}>
+    // @ts-ignore
+    <CardStyled component="button">
       <CardMedia component="img" src={image} />
-      <CardContent className={styles.content}>
-        <Typography variant="body2" className={styles.title}>
-          {title}
-        </Typography>
+      <ContentStyled>
+        <TitleStyled variant="body2">{title}</TitleStyled>
         <Typography variant="body2" sx={{ whiteSpace: 'nowrap' }}>
-          {price} грн
+          {price} {t('uah')}
         </Typography>
-      </CardContent>
-    </Card>
+      </ContentStyled>
+    </CardStyled>
   );
 };
 

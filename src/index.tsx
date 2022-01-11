@@ -3,22 +3,29 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { CssBaseline, ThemeProvider } from '@mui/material';
+import { I18nextProvider } from 'react-i18next';
+import i18next from 'i18next';
 import { setupStore } from './store/store';
 import App from './App';
-import { themeMaterial } from './styles/themeMaterial';
+import { GlobalStyle } from './themes/globalStyles';
+import './i18n';
+import { fontsMaterial } from './themes/fontsMaterial';
 
 const store = setupStore();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <ThemeProvider theme={themeMaterial}>
+    <I18nextProvider i18n={i18next}>
+      <Router>
+        <GlobalStyle />
         <CssBaseline />
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </ThemeProvider>
-    </Router>
+        <ThemeProvider theme={fontsMaterial}>
+          <Provider store={store}>
+            <App />
+          </Provider>
+        </ThemeProvider>
+      </Router>
+    </I18nextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

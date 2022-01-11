@@ -1,29 +1,28 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import CardWrapper from '../layout/card-wrapper/CardWrapper';
 import Input from '../input/Input';
 import Container from '../layout/container/Container';
 import Avatar from '../common/avatar/Avatar';
-import Button from '../common/button/Button';
-import styles from './Profile.module.scss';
+import { ButtonStyled, FormStyled, InputsStyled } from './ProfileStyled';
 
 function Profile() {
+  const { t } = useTranslation('common');
+
   return (
     <Container size="md">
-      <CardWrapper title="Профиль">
+      <CardWrapper title={t('profile')}>
         <Avatar />
-        <Box component="form" className={styles.form}>
-          <div className={styles.inputs}>
+        <FormStyled component="form">
+          <InputsStyled>
             <Input label="Email" />
             <Input label="Password" type="password" />
-          </div>
+          </InputsStyled>
 
           <Input label="Email" />
           <Input label="Password" type="password" />
-          <Button variant="contained" className={styles.button}>
-            Сохранить
-          </Button>
-        </Box>
+          <ButtonStyled variant="contained">{t('save')}</ButtonStyled>
+        </FormStyled>
       </CardWrapper>
     </Container>
   );

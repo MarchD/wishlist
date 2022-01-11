@@ -1,15 +1,17 @@
 import React, { FC } from 'react';
-import { Card, CardHeader } from '@mui/material';
+import { CardHeader } from '@mui/material';
 import { CardWrapperProps } from 'src/models/card';
 import Title from '../../common/title/Title';
-import styles from './CardWrapper.module.scss';
+import { CardStyled } from './CardWrapperStyled';
 
-const CardWrapper: FC<CardWrapperProps> = ({ children, title, ...props }) => {
+const CardWrapper: FC<CardWrapperProps> = (props) => {
+  const { children, title, ...otherProps } = props;
+
   return (
-    <Card {...props} className={styles.card}>
-      <CardHeader title={<Title>{title}</Title>} sx={{ mt: 1, mb: 2, p: 0 }} />
+    <CardStyled {...otherProps}>
+      {title && <CardHeader title={<Title>{title}</Title>} sx={{ mt: 1, mb: 2, p: 0 }} />}
       {children}
-    </Card>
+    </CardStyled>
   );
 };
 
