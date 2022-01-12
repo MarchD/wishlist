@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { TextField } from '@mui/material';
 import { TextFieldProps } from '@mui/material/TextField/TextField';
+import { InputStyled } from './InputStyled';
 
 const Input: FC<TextFieldProps> = (props) => {
-  return <TextField fullWidth {...props} />;
+  return <InputStyled fullWidth {...props} />;
 };
 
 export default Input;

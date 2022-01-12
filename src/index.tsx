@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
-import { setupStore } from './store/store';
+import { setupStore } from './rtk/app/store';
 import App from './App';
 import { GlobalStyle } from './themes/globalStyles';
 import './i18n';

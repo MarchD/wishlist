@@ -14,4 +14,9 @@ export default {
   save: 'Сохранить',
   uah: 'грн',
   addGift: 'Добавить подарок',
+  name: 'Имя',
+  lastname: 'Фамилия',
+  registration: 'Регистрация',
+  password: 'Пароль',
+  repeatPassword: 'Повторите пароль',
 };
