@@ -8,7 +8,7 @@ const Modal: FC<ModalProps> = (props) => {
   const { children, title, onClose, ...otherProps } = props;
 
   return (
-    <ModalMaterial {...otherProps}>
+    <ModalMaterial {...otherProps} onClose={onClose}>
       <CardWrapperStyled title={title} actionComponent={<Close onClick={onClose} />}>
         {children}
       </CardWrapperStyled>
