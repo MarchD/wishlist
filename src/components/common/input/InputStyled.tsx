@@ -8,7 +8,6 @@ export const InputStyled = styled((props) => <TextField {...props} />)`
   }
 
   .MuiOutlinedInput-root.Mui-focused fieldset {
-    // - Set the Input border when parent is focused
     border-color: ${({ theme }) => theme.color.orange};
   }
 
