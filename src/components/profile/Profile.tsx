@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import CardWrapper from '../layout/card-wrapper/CardWrapper';
-import Input from '../input/Input';
+import Input from '../common/input/Input';
 import Container from '../layout/container/Container';
 import Avatar from '../common/avatar/Avatar';
 import { ButtonStyled, FormStyled, InputsStyled } from './ProfileStyled';
@@ -15,11 +15,11 @@ function Profile() {
         <Avatar />
         <FormStyled component="form">
           <InputsStyled>
-            <Input label="Email" />
-            <Input label="Password" type="password" />
+            <Input label={t('name')} />
+            <Input label={t('lastname')} />
           </InputsStyled>
 
-          <Input label="Email" />
+          <Input label="Email" type="email" />
           <Input label="Password" type="password" />
           <ButtonStyled variant="contained">{t('save')}</ButtonStyled>
         </FormStyled>

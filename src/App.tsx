@@ -5,6 +5,7 @@ import Header from './components/header/Header';
 import { routes } from './components/routes/routes';
 import { Routes as RoutesEnum } from './models/routes';
 import { light } from './themes';
+import ModalManager from './components/modals/ModalManager';
 
 function App() {
   /* Here will be dark mode */
@@ -13,6 +14,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Suspense fallback="loading">
+        <ModalManager />
         <Header />
         <Routes>
           {routes.map((route) => (

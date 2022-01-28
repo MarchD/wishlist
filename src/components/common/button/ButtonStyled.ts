@@ -10,8 +10,9 @@ export const ButtonStyled = styled(Button)`
     if (variant === 'text') {
       return `
       margin: 0 !important;
+      color:  ${theme.color.green};
       
-      &: hover {
+      &:hover {
         background: none;
       }`;
     }

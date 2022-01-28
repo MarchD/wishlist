@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import Container from '../layout/container/Container';
 import Logo from '../common/logo/Logo';
 import { LogoSizes } from '../../models/logo';
@@ -11,6 +12,11 @@ import { CardStyled, ContentStyled, SliderStyled } from './MainStyled';
 
 function Main() {
   const { t } = useTranslation('common');
+  const history = useNavigate();
+
+  const toLoginPage = useCallback(() => {
+    history('/login');
+  }, [history]);
 
   return (
     <Container size="md">
@@ -22,7 +28,9 @@ function Main() {
             <Logo size={LogoSizes.LARGE} />
           </Typography>
 
-          <Button variant="contained">{t('create')}</Button>
+          <Button variant="contained" onClick={toLoginPage}>
+            {t('create')}
+          </Button>
         </ContentStyled>
 
         <SliderStyled interval={2000} indicators={false} navButtonsAlwaysInvisible>
