@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import Header from './components/header/Header';
-import { routes } from './components/routes/routes';
+import { routes } from './routes';
 import { Routes as RoutesEnum } from './models/routes';
 import { light } from './themes';
 import ModalManager from './components/modals/ModalManager';

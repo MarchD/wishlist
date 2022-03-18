@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Container from '../layout/container/Container';
+import Container from '../../components/layout/container/Container';
 
 const Wishlist: FC = () => {
   return <Container size="lg">Wishlist</Container>;

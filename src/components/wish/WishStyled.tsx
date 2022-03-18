@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, CardContent, styled, Typography } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
+import styled from 'styled-components';
 
 export const CardStyled = styled((props) => <Card {...props} />)`
+  border: 1px solid ${({ theme }) => theme.color.black};
   width: 100%;
   max-width: 300px;
   padding: 0.5rem;

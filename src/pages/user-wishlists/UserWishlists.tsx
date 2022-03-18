@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import Container from '../layout/container/Container';
-import AccordionList from '../common/accordion/accordion-list/AccordionList';
+import Container from '../../components/layout/container/Container';
+import AccordionList from '../../components/common/accordion/accordion-list/AccordionList';
 import { wishes } from '../../mocked-data/wishes';
-import WishList from '../wish/WishList';
+import WishList from '../../components/wish/WishList';
 
 function UserWishlists() {
   const accordionList = useMemo(
@@ -19,6 +19,11 @@ function UserWishlists() {
       },
       {
         id: 3,
+        title: 'Список 3',
+        component: <WishList wishes={wishes[2].list} />,
+      },
+      {
+        id: 4,
         title: 'Список 3',
         component: <WishList wishes={wishes[2].list} />,
       },

@@ -1,16 +1,19 @@
 import React, { FC, MouseEvent, useState } from 'react';
-import { Accordion as AccordionMaterial } from '@mui/material';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { ExpandMore } from '@mui/icons-material';
 import { AccordionProps } from 'src/models/accordion';
 import { useTranslation } from 'react-i18next';
+import { openModal } from 'src/rtk/features/modalSlice';
+import { ModalTypes } from 'src/models/modal';
+import { useAppDispatch } from 'src/hooks/redux';
 import Title from '../title/Title';
 import Button from '../button/Button';
-import { AccordionSummaryStyled } from './AccordionStyled';
+import { AccordionStyled, AccordionSummaryStyled } from './AccordionStyled';
 
 const Accordion: FC<AccordionProps> = (props) => {
   const { title, withButton, children } = props;
   const [expanded, setExpanded] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
   const { t } = useTranslation('common');
 
   const toggleAccordion = () => {
@@ -19,10 +22,11 @@ const Accordion: FC<AccordionProps> = (props) => {
 
   const handleClickBtn = (e: MouseEvent<HTMLButtonElement>) => {
     e.stopPropagation();
+    dispatch(openModal(ModalTypes.NEW_GIFT));
   };
 
   return (
-    <AccordionMaterial expanded={expanded} onChange={toggleAccordion}>
+    <AccordionStyled expanded={expanded} onChange={toggleAccordion}>
       <AccordionSummaryStyled expandIcon={<ExpandMore />}>
         <Title>{title}</Title>
         {expanded && withButton && (
@@ -33,7 +37,7 @@ const Accordion: FC<AccordionProps> = (props) => {
       </AccordionSummaryStyled>
 
       <AccordionDetails sx={{ boxShadow: 'none' }}>{children}</AccordionDetails>
-    </AccordionMaterial>
+    </AccordionStyled>
   );
 };
 

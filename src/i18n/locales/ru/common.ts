@@ -19,4 +19,9 @@ export default {
   registration: 'Регистрация',
   password: 'Пароль',
   repeatPassword: 'Повторите пароль',
+  newGift: 'Новый подарок',
+  link: 'Ссылка',
+  price: 'Цена',
+  add: 'Добавить',
+  title: 'Название',
 };

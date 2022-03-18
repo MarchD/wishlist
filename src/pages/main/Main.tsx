@@ -2,11 +2,11 @@ import React, { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import Container from '../layout/container/Container';
-import Logo from '../common/logo/Logo';
+import Container from '../../components/layout/container/Container';
+import Logo from '../../components/common/logo/Logo';
 import { LogoSizes } from '../../models/logo';
-import Button from '../common/button/Button';
-import AnimationFrame from '../common/animation/AnimationFrame';
+import Button from '../../components/common/button/Button';
+import AnimationFrame from '../../components/common/animation/AnimationFrame';
 import { animations } from '../../mocked-data/animations';
 import { CardStyled, ContentStyled, SliderStyled } from './MainStyled';
 

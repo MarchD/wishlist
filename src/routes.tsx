@@ -1,12 +1,11 @@
 import React from 'react';
-import { Routes, RouteType } from '../../models/routes';
-import Profile from '../profile/Profile';
-import UserWishlists from '../user-wishlists/UserWishlists';
-import Wishlist from '../wishlist/Wishlist';
-import Login from '../login/Login';
-import PageNotFound from '../page-not-found/page-not-found';
-// eslint-disable-next-line import/no-cycle
-import Main from '../main/Main';
+import { Routes, RouteType } from './models/routes';
+import Profile from './pages/profile/Profile';
+import UserWishlists from './pages/user-wishlists/UserWishlists';
+import Wishlist from './pages/wishlist/Wishlist';
+import Login from './pages/login/Login';
+import Main from './pages/main/Main';
+import NotFound from './pages/not-found/not-found';
 
 export const routes: RouteType[] = [
   {
@@ -34,7 +33,7 @@ export const routes: RouteType[] = [
   },
   {
     path: Routes.PAGE_NOT_FOUND,
-    component: <PageNotFound />,
+    component: <NotFound />,
     label: '404',
   },
   {

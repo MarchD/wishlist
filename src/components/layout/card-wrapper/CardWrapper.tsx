@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import React, { forwardRef, PropsWithChildren } from 'react';
 import { CardHeader } from '@mui/material';
 import { CardWrapperProps } from 'src/models/card';
+import Card from '@mui/material/Card';
 import Title from '../../common/title/Title';
 import { CardStyled } from './CardWrapperStyled';
 
-const CardWrapper: FC<CardWrapperProps> = (props) => {
+const CardWrapper = forwardRef<typeof Card, PropsWithChildren<CardWrapperProps>>((props) => {
   const { children, title, actionComponent, ...otherProps } = props;
 
   return (
@@ -19,6 +20,6 @@ const CardWrapper: FC<CardWrapperProps> = (props) => {
       {children}
     </CardStyled>
   );
-};
+});
 
 export default CardWrapper;

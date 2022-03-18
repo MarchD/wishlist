@@ -2,8 +2,8 @@ import { ModalProps as ModalPropsMaterial } from '@mui/material/Modal/Modal';
 
 export enum ModalTypes {
   REGISTRATION = 'registration',
+  NEW_GIFT = 'newGift',
   /* Is will be implemented */
-  // NEW_GIFT = 'NEW_GIFT',
   // CHOOSE_GIFT = 'CHOOSE_GIFT',
 }
 

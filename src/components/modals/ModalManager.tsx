@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from 'src/hooks/redux';
 import { closeModal } from 'src/rtk/features/modalSlice';
 import Modal from './modal/Modal';
 import RegistrationModal from './RegistrationModal';
+import NewGiftModal from './NewGiftModal';
 
 const ModalManager = () => {
   const { t } = useTranslation('common');
@@ -20,11 +21,15 @@ const ModalManager = () => {
         title: t('registration'),
         component: RegistrationModal,
       },
+      newGift: {
+        title: t('newGift'),
+        component: NewGiftModal,
+      },
     }),
     [t]
   );
 
-  if (!type) return null;
+  if (!type || !modals[type]) return null;
 
   const RenderModalComponent = modals[type].component;
 

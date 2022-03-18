@@ -9,7 +9,6 @@ const Wish: FC<WishProps> = (props) => {
   const { t } = useTranslation('common');
 
   return (
-    // @ts-ignore
     <CardStyled component="button">
       <CardMedia component="img" src={image} />
       <ContentStyled>

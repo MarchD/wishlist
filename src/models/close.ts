@@ -1,5 +1,5 @@
 import { IconButtonProps } from '@mui/material';
 
-export interface CloseProps extends IconButtonProps {
-  onClick: any;
+export interface IconProps extends IconButtonProps {
+  onClick?: (...arg: any) => void;
 }

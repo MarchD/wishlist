@@ -15,3 +15,10 @@ export const registrationSchema = yup.object({
     })
     .required(),
 });
+
+export const newGiftSchema = yup.object({
+  title: yup.string().required(),
+  link: yup.string(),
+  price: yup.number().required(),
+  image: yup.mixed(),
+});
