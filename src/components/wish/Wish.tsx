@@ -1,15 +1,19 @@
 import React, { FC } from 'react';
 import { CardMedia, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { Wish as WishProps } from '../../models/wish';
+import { WishProps } from '../../models/wish';
 import { CardStyled, ContentStyled, TitleStyled } from './WishStyled';
 
 const Wish: FC<WishProps> = (props) => {
-  const { price, title, image } = props;
+  const { price, title, image, onClick, id } = props;
   const { t } = useTranslation('common');
 
+  const handleClickBtn = () => {
+    onClick && onClick(id);
+  };
+
   return (
-    <CardStyled component="button">
+    <CardStyled component="button" onClick={handleClickBtn}>
       <CardMedia component="img" src={image} />
       <ContentStyled>
         <TitleStyled variant="body2">{title}</TitleStyled>

@@ -1,10 +1,11 @@
 import React, { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from 'src/hooks/redux';
-import { closeModal } from 'src/rtk/features/modalSlice';
+import { closeModal } from 'src/rtk/features/modal';
 import Modal from './modal/Modal';
 import RegistrationModal from './RegistrationModal';
 import NewGiftModal from './NewGiftModal';
+import ChoosingGift from './ChoosingGift';
 
 const ModalManager = () => {
   const { t } = useTranslation('common');
@@ -24,6 +25,10 @@ const ModalManager = () => {
       newGift: {
         title: t('newGift'),
         component: NewGiftModal,
+      },
+      chooseGift: {
+        title: t('chooseGift'),
+        component: ChoosingGift,
       },
     }),
     [t]

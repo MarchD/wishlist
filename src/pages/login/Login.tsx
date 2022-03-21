@@ -3,7 +3,7 @@ import { CardActions } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { LogoSizes } from 'src/models/logo';
 import { useAppDispatch } from 'src/hooks/redux';
-import { openModal } from 'src/rtk/features/modalSlice';
+import { openModal } from 'src/rtk/features/modal';
 import { ModalTypes } from 'src/models/modal';
 import { Controller } from 'react-hook-form';
 import Logo from '../../components/common/logo/Logo';

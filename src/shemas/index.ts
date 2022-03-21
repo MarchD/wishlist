@@ -22,3 +22,7 @@ export const newGiftSchema = yup.object({
   price: yup.number().required(),
   image: yup.mixed(),
 });
+
+export const choosingGiftSchema = yup.object({
+  email: yup.string().required(),
+});

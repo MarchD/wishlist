@@ -24,4 +24,6 @@ export default {
   price: 'Цена',
   add: 'Добавить',
   title: 'Название',
+  chooseGift: 'Выбрать подарок',
+  choose: 'Выбрать',
 };

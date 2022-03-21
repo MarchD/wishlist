@@ -3,7 +3,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import { ExpandMore } from '@mui/icons-material';
 import { AccordionProps } from 'src/models/accordion';
 import { useTranslation } from 'react-i18next';
-import { openModal } from 'src/rtk/features/modalSlice';
+import { openModal } from 'src/rtk/features/modal';
 import { ModalTypes } from 'src/models/modal';
 import { useAppDispatch } from 'src/hooks/redux';
 import Title from '../title/Title';

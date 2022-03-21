@@ -39,6 +39,7 @@
     "@typescript-eslint/no-unused-vars": [
       "error"
     ],
+    "no-unused-expressions": "off",
     "no-param-reassign": "off",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": [
@@ -68,7 +69,8 @@
           ".ts"
         ]
       }
-    ]
+    ],
+    "import/no-cycle": "off"
   },
   "settings": {
     "import/resolver": {
