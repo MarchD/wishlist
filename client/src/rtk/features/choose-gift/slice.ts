@@ -1,5 +1,5 @@
 import { createSlice, Dispatch } from '@reduxjs/toolkit';
-import { ModalChoosingGift } from 'src/rtk/features/choose-gift';
+import { ModalChoosingGift } from 'src/rtk/features/choose-gift/index';
 import { ModalTypes } from 'src/models/modal';
 import { openModal } from '../modal';
 

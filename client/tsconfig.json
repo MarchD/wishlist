@@ -19,10 +19,15 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "baseUrl": "./src",
+    "paths": {
+      "@Components/*": [
+        "./components/*"
+      ]
+    },
     "useUnknownInCatchVariables": false
   },
   "include": [
-    "src"
+    "./src"
   ]
 }
