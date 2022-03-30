@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Container from '../../components/layout/container/Container';
+import Container from '@Components/layout/container/Container';
 
 function NotFound() {
   const { t } = useTranslation('common');

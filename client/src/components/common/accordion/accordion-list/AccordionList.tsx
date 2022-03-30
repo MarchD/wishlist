@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { AccordionListProps, AccordionList as Wish } from 'src/models/accordion';
+import { AccordionListProps, AccordionList as Wish } from '@Models/accordion';
 import Accordion from '../Accordion';
 import { ListStyled } from './AccordionListStyled';
 

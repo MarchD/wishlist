@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Modal as ModalMaterial } from '@mui/material';
-import { ModalProps } from 'src/models/modal';
-import Close from '../../common/icons/Close';
+import { ModalProps } from '@Models/modal';
+import Close from '@Components/common/icons/Close';
 import { CardWrapperStyled } from './ModalStyled';
 
 const Modal: FC<ModalProps> = (props) => {

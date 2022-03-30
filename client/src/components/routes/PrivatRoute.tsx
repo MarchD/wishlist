@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 // import { Navigate, Route } from 'react-router-dom';
-import { RouteType } from '../../models/routes';
+import { RouteType } from '@Models/routes';
 
 const PrivatRoute: FC<RouteType> = () => {
   // const { role, ...otherProps } = props;

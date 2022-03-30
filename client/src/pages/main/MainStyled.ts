@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import CardWrapper from '../../components/layout/card-wrapper/CardWrapper';
-import Slider from '../../components/slider/Slider';
+import CardWrapper from '@Components/layout/card-wrapper/CardWrapper';
+import Slider from '@Components/slider/Slider';
 
 export const CardStyled = styled(CardWrapper)`
   display: flex;

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { IconProps } from 'src/models/close';
 import { Cancel } from '@mui/icons-material';
+import { IconProps } from '@Models/close';
 import { IconStyled } from './IconStyled';
 
 const Close: FC<IconProps> = (props) => {

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { CardMedia, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { WishProps } from '../../models/wish';
+import { WishProps } from '@Models/wish';
 import { CardStyled, ContentStyled, TitleStyled } from './WishStyled';
 
 const Wish: FC<WishProps> = (props) => {

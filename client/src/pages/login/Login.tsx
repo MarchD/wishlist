@@ -1,20 +1,20 @@
 import React from 'react';
 import { CardActions } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { LogoSizes } from 'src/models/logo';
-import { useAppDispatch } from 'src/hooks/redux';
-import { openModal } from 'src/rtk/features/modal';
-import { ModalTypes } from 'src/models/modal';
 import { Controller } from 'react-hook-form';
-import Logo from '../../components/common/logo/Logo';
-import CardWrapper from '../../components/layout/card-wrapper/CardWrapper';
-import Input from '../../components/common/input/Input';
-import Container from '../../components/layout/container/Container';
-import Button from '../../components/common/button/Button';
+import Logo from '@Components/common/logo/Logo';
+import CardWrapper from '@Components/layout/card-wrapper/CardWrapper';
+import Input from '@Components/common/input/Input';
+import Container from '@Components/layout/container/Container';
+import Button from '@Components/common/button/Button';
+import Form from '@Components/layout/form/Form';
+import { LogoSizes } from '@Models/logo';
+import { useAppDispatch } from '@Hooks/redux';
+import { openModal } from '@Rtk/features/modal';
+import { ModalTypes } from '@Models/modal';
+import { useFormWithSchema } from '@Hooks/useYupValidationResolver';
+import { loginSchema } from '@src/shemas';
 import { BoxStyled } from './LoginStyled';
-import Form from '../../components/layout/form/Form';
-import { useFormWithSchema } from '../../hooks/useYupValidationResolver';
-import { loginSchema } from '../../shemas';
 
 function Login() {
   const { t } = useTranslation('common');

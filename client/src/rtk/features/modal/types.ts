@@ -1,6 +1,7 @@
-import { ModalTypes } from 'src/models/modal';
+// import { ModalTypes } from '../../../models/modal';
 
 export interface modalState {
   isOpen: boolean;
-  type: ModalTypes | null;
+  type: any;
+  // type: ModalTypes | null;
 }

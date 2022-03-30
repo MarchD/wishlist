@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { Grid } from '@mui/material';
+import { WishListProps } from '@Models/wish';
+import { useAppDispatch } from '@Hooks/redux';
+import { openModal } from '@Rtk/features/modal';
+import { ModalTypes } from '@Models/modal';
 import Wish from './Wish';
-import { WishListProps } from '../../models/wish';
-import { useAppDispatch } from '../../hooks/redux';
-import { openModal } from '../../rtk/features/modal';
-import { ModalTypes } from '../../models/modal';
 
 const WishList: FC<WishListProps> = (props) => {
   const { wishes } = props;

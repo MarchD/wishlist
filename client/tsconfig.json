@@ -23,6 +23,21 @@
     "paths": {
       "@Components/*": [
         "./components/*"
+      ],
+      "@Models/*": [
+        "./models/*"
+      ],
+      "@Hooks/*": [
+        "./hooks/*"
+      ],
+      "@Rtk/*": [
+        "./rtk/*"
+      ],
+      "@Assets": [
+        "./assets"
+      ],
+      "@src/*": [
+        "*"
       ]
     },
     "useUnknownInCatchVariables": false

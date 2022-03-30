@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { FormProps } from 'src/models/forms';
+import { FormProps } from '@Models/forms';
 import { FormStyled } from './FormStyled';
 
 const Form: FC<FormProps> = (props) => {

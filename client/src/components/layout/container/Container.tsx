@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ContainerProps } from 'src/models/container';
+import { ContainerProps } from '@Models/container';
 import { ContainerStyled } from './ContainerStyled';
 
 const Container: FC<ContainerProps> = (props) => {

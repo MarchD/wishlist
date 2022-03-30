@@ -2,11 +2,11 @@ import React from 'react';
 import { CardActions } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Controller } from 'react-hook-form';
+import { useFormWithSchema } from '@Hooks/useYupValidationResolver';
+import { newGiftSchema } from '@src/shemas';
 import Input from '../common/input/Input';
 import Button from '../common/button/Button';
 import Form from '../layout/form/Form';
-import { useFormWithSchema } from '../../hooks/useYupValidationResolver';
-import { newGiftSchema } from '../../shemas';
 import File from '../common/file/File';
 
 const NewGiftModal = () => {

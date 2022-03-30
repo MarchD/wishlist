@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import styled from 'styled-components';
-import Button from '../../components/common/button/Button';
+import Button from '@Components/common/button/Button';
 
 export const FormStyled = styled(Box)`
   display: flex;

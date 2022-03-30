@@ -1,8 +1,8 @@
 import React, { forwardRef, PropsWithChildren } from 'react';
 import { CardHeader } from '@mui/material';
-import { CardWrapperProps } from 'src/models/card';
 import Card from '@mui/material/Card';
-import Title from '../../common/title/Title';
+import { CardWrapperProps } from '@Models/card';
+import Title from '@Components/common/title/Title';
 import { CardStyled } from './CardWrapperStyled';
 
 const CardWrapper = forwardRef<typeof Card, PropsWithChildren<CardWrapperProps>>((props) => {

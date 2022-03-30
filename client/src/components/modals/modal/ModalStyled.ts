@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CardWrapper from '../../layout/card-wrapper/CardWrapper';
+import CardWrapper from '@Components/layout/card-wrapper/CardWrapper';
 
 export const CardWrapperStyled = styled(CardWrapper)`
   position: absolute;

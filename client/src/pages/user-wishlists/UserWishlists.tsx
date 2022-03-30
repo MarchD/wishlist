@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
-import Container from '../../components/layout/container/Container';
-import AccordionList from '../../components/common/accordion/accordion-list/AccordionList';
-import { wishes } from '../../mocked-data/wishes';
-import WishList from '../../components/wish/WishList';
+import Container from '@Components/layout/container/Container';
+import AccordionList from '@Components/common/accordion/accordion-list/AccordionList';
+import { wishes } from '@src/mocked-data/wishes';
+import WishList from '@Components/wish/WishList';
 
 function UserWishlists() {
   const accordionList = useMemo(

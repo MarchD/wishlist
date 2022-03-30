@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
-import { AnimationProps } from 'src/models/animation';
+import { AnimationProps } from '@Models/animation';
 
 const AnimationFrame: FC<AnimationProps> = (props) => {
   const { data, height, width } = props;

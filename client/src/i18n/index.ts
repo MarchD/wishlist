@@ -1,7 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { DEFAULT_LOCALE } from '@Models/locales';
 import commonRu from './locales/ru/common';
-import { DEFAULT_LOCALE } from '../models/locales';
 
 export const resources = {
   ru: {

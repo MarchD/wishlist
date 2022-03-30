@@ -2,14 +2,14 @@ import React from 'react';
 import { CardActions, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { Controller } from 'react-hook-form';
-import { useFormWithSchema } from 'src/hooks/useYupValidationResolver';
-import { choosingGiftSchema } from 'src/shemas';
 import { useSelector } from 'react-redux';
+import { useFormWithSchema } from '@Hooks/useYupValidationResolver';
+import { getChosenGift } from '@Rtk/features/choose-gift';
+import { wishes } from '@src/mocked-data/wishes';
+import { choosingGiftSchema } from '@src/shemas';
 import Input from '../common/input/Input';
 import Button from '../common/button/Button';
 import Form from '../layout/form/Form';
-import { getChosenGift } from '../../rtk/features/choose-gift';
-import { wishes } from '../../mocked-data/wishes';
 
 const ChoosingGift = () => {
   const { t } = useTranslation('common');

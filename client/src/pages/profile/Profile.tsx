@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import CardWrapper from '../../components/layout/card-wrapper/CardWrapper';
-import Input from '../../components/common/input/Input';
-import Container from '../../components/layout/container/Container';
-import Avatar from '../../components/common/avatar/Avatar';
+import CardWrapper from '@Components/layout/card-wrapper/CardWrapper';
+import Input from '@Components/common/input/Input';
+import Container from '@Components/layout/container/Container';
+import Avatar from '@Components/common/avatar/Avatar';
 import { ButtonStyled, FormStyled, InputsStyled } from './ProfileStyled';
 
 function Profile() {

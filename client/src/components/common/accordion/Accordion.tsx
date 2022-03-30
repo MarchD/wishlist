@@ -1,11 +1,11 @@
 import React, { FC, MouseEvent, useState } from 'react';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import { ExpandMore } from '@mui/icons-material';
-import { AccordionProps } from 'src/models/accordion';
 import { useTranslation } from 'react-i18next';
-import { openModal } from 'src/rtk/features/modal';
-import { ModalTypes } from 'src/models/modal';
-import { useAppDispatch } from 'src/hooks/redux';
+import { AccordionProps } from '@Models/accordion';
+import { openModal } from '@Rtk/features/modal';
+import { ModalTypes } from '@Models/modal';
+import { useAppDispatch } from '@Hooks/redux';
 import Title from '../title/Title';
 import Button from '../button/Button';
 import { AccordionStyled, AccordionSummaryStyled } from './AccordionStyled';

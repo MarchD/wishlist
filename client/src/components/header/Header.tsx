@@ -2,8 +2,8 @@ import React from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { AppBar, Box, Button as ButtonMaterial } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import { Routes } from 'src/models/routes';
-import { LogoSizes } from 'src/models/logo';
+import { Routes } from '@Models/routes';
+import { LogoSizes } from '@Models/logo';
 import Logo from '../common/logo/Logo';
 import { LinkStyled, ToolbarStyled } from './HeaderStyled';
 

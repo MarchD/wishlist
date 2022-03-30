@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch, useAppSelector } from 'src/hooks/redux';
-import { closeModal } from 'src/rtk/features/modal';
+import { useAppDispatch, useAppSelector } from '@Hooks/redux';
+import { closeModal } from '@Rtk/features/modal';
 import Modal from './modal/Modal';
 import RegistrationModal from './RegistrationModal';
 import NewGiftModal from './NewGiftModal';
@@ -16,7 +16,7 @@ const ModalManager = () => {
     dispatch(closeModal());
   }, [dispatch]);
 
-  const modals = useMemo(
+  const modals = useMemo<any>(
     () => ({
       registration: {
         title: t('registration'),
